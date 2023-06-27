@@ -60,9 +60,9 @@ type MyWebAppReconciler struct {
 func (r *MyWebAppReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	logger := log.FromContext(ctx)
 
-	logger.Info(fmt.Sprintf("%v", strings.Repeat("#", 10)))
+	logger.Info(fmt.Sprintf("%v \n", strings.Repeat("#", 10)))
 	logger.Info("Reconcile Logic Started")
-	logger.Info(fmt.Sprintf("%v", strings.Repeat("#", 10)))
+	logger.Info(fmt.Sprintf("%v \n", strings.Repeat("#", 10)))
 
 	instance := &webappv1.MyWebApp{}
 	// "r" refers to the reconciler object (ReconcileWebApp in the generated code).
@@ -92,9 +92,9 @@ func (r *MyWebAppReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 		logger.Error(err, "Scaling of replica set have error")
 	}
 
-	logger.Info(fmt.Sprintf("%v", strings.Repeat("#", 10)))
+	logger.Info(fmt.Sprintf("%v \n", strings.Repeat("#", 10)))
 	logger.Info("Reconcile Logic Ended")
-	logger.Info(fmt.Sprintf("%v", strings.Repeat("#", 10)))
+	logger.Info(fmt.Sprintf("%v \n", strings.Repeat("#", 10)))
 
 	// Renconcile logic will be triggered every 30 seconds
 	return ctrl.Result{RequeueAfter: time.Duration(30 * time.Second)}, err

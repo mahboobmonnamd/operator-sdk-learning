@@ -9,4 +9,11 @@ metadata:
     app.kubernetes.io/created-by: operator-src
   name: mywebapp-sample
 spec:
-  # TODO(user): Add fields here
+  image: yeasy/simple-web:latest
+  port: 8080
+  start: 12
+  end: 15
+  replica: 5
+  deployments:
+    - name: mywebapp-sample
+      namespace: default
