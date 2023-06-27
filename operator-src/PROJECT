@@ -10,4 +10,14 @@ plugins:
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: operator-src
 repo: github.com/mahboobmonnamd/operator-sdk-learning
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: 4m.fyi
+  group: web-app
+  kind: MyWebApp
+  path: github.com/mahboobmonnamd/operator-sdk-learning/api/v1
+  version: v1
 version: "3"

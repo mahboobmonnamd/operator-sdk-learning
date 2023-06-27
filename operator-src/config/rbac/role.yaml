@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - web-app.4m.fyi
+  resources:
+  - mywebapps
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - web-app.4m.fyi
+  resources:
+  - mywebapps/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - web-app.4m.fyi
+  resources:
+  - mywebapps/status
+  verbs:
+  - get
+  - patch
+  - update
