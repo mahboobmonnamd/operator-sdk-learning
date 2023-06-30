@@ -16,6 +16,11 @@ make manifests
 kubectl apply -f operator-src/config/crd/bases/web-app.4m.fyi_mywebapps.yaml
 make run
 ```
+or
+```sh
+make install run
+```
+> install will do the manifests, applying to cluster and run the operator.
 
 With the above step we applied CRD and ran the controller.
 
