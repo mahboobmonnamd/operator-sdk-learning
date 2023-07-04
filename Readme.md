@@ -7,7 +7,7 @@ In this project we are trying to achieve the following
 
 To have the details , please visit the [Wiki](https://github.com/mahboobmonnamd/operator-sdk-learning/wiki).
 
-## How to use this
+## How to use this in local
 
 * Perform the sequence of commands below
 
