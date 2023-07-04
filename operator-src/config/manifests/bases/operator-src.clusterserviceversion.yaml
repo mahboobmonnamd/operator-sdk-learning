@@ -1,0 +1,47 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: operator-src.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: MyWebApp is the Schema for the mywebapps API
+      displayName: My Web App
+      kind: MyWebApp
+      name: mywebapps.web-app.4m.fyi
+      version: v1
+  description: as
+  displayName: my web app
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - as
+  links:
+  - name: Operator Src
+    url: https://operator-src.domain
+  maintainers:
+  - email: '"sadas@af.casd'
+    name: as
+  maturity: alpha
+  provider:
+    name: sad
+  version: 0.0.0
